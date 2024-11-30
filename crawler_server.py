@@ -5,6 +5,16 @@ from urllib.parse import urlparse, urljoin
 
 app = FastAPI()
 
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Web Crawler API!"}
+
+
+@app.get("/crawl")
+def crawl():
+    return {"message": "Crawling in progress..."}
+
 @app.post("/crawl")
 async def crawl(url: str):
     sitemap = {}
