@@ -7,6 +7,7 @@ from fastapi import FastAPI, HTTPException
 app = FastAPI()
 
 
+
 semaphore = asyncio.Semaphore(10)
 
 @app.get("/")
