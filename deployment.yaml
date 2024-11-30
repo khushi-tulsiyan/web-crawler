@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-crawler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-crawler
+  template:
+    metadata:
+      labels:
+        app: web-crawler
+    spec:
+      containers:
+      - name: web-crawler
+        image: web-crawler:latest
+        ports:
+        - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /crawl
+            port: 8000
+            httpHeaders:
+            - name: Content-Type
+              value: application/json
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
