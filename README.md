@@ -26,7 +26,7 @@ The **Web Crawler API** is a Python-based application built using FastAPI. It pr
 ### Using Docker
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/khushi-tulsiyan/web-crawler.git
    cd web-crawler
    ```
 
@@ -40,7 +40,7 @@ The **Web Crawler API** is a Python-based application built using FastAPI. It pr
 ### Without Docker
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/khushi-tulsiyan/web-crawler.git
    cd web-crawler
    ```
 
